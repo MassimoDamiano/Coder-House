@@ -154,10 +154,21 @@ header a:hover{
 .img-lenguajes{
     width: 200px;
     height: 200px;
-    object-fit: cover;
-
+    object-fit: contain;
+    animation-name: img-lenguajes--animation;
+    animation-duration:5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
 }
 
+@keyframes img-lenguajes--animation{
+    50%{
+        width: 500px;
+        height: 50px;
+    }
+
+}
 
 .img-grid1{
     grid-area: html;
