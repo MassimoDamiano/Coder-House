@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+* {
+  box-sizing: border-box; }
+  *::selection {
+    background-color: black;
+    color: blueviolet; }
+
+body {
+  margin: 0;
+  background-color: transparent;
+  line-height: 1.4;
+  font-family: "Roboto", "sans-serif"; }
+
+html {
+  scroll-behavior: smooth; }
+
+h1, h3 {
+  font-size: 3.5em;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 20px;
+  color: blueviolet; }
+
+h2 {
+  font-size: 2.7em; }
+
+h3 {
+  font-size: 2em; }
+
+h4 {
+  text-align: center;
+  font-weight: bold; }
+
+h5 {
+  font-weight: bold; }
+
+p {
+  font-size: 1.25em;
+  margin: 10px; }
+
+ul {
+  list-style: none; }
+
+.container {
+  max-width: 1400px;
+  margin: auto; }
+
+button {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: blueviolet; }
+  buttonbutton:hover {
+    background-color: #6521a5; }
+
+header {
+  background-color: whitesmoke; }
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    header .container .header-logo {
+      font-style: italic;
+      font-weight: bold;
+      padding: 15px 20px;
+      transition: transform 1s;
+      margin-top: 8px; }
+    header .container .header-logo:hover {
+      color: blueviolet;
+      transform: scale(1) rotate(360deg); }
+    header .container nav {
+      display: flex;
+      padding-bottom: 5px;
+      color: blueviolet; }
+      header .container nav a {
+        padding: 5px 12px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        transition: transform 1s; }
+      header .container nav a:hover {
+        color: blueviolet;
+        transform: scale(1.1); }
+
+.container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .container-footer .iconos-redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    height: 30px;
+    object-fit: contain; }
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url(../images/hero.jpg), linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+  #hero h1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); }
+
+.container-ofrezco {
+  display: flex; }
+  .container-ofrezco h5 {
+    text-align: center; }
+  .container-ofrezco .ofrezco__web-texto {
+    text-align: center; }
+
+/*paginan-mis conocimientos*/
+.grid {
+  display: grid;
+  width: 100%;
+  margin-top: 30px;
+  place-items: center;
+  gap: 20px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "html   css" "sass js"; }
+  .grid .img-grid1 {
+    grid-area: html; }
+  .grid .img-grid2 {
+    grid-area: js; }
+  .grid .img-grid3 {
+    grid-area: sass; }
+  .grid .img-grid4 {
+    grid-area: css; }
+  .grid .img-lenguajes {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    animation-name: img-lenguajes--animation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite; }
+
+@keyframes img-lenguajes--animation {
+  50% {
+    width: 500px;
+    height: 50px; } }
+
+.h1-form {
+  text-align: center;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  color: blueviolet; }
+
+.container-5 {
+  display: flex; }
+  .container-5 .container-form {
+    background-color: transparent;
+    width: 400px;
+    margin: auto;
+    padding: 30px;
+    border: 3px solid black;
+    margin-bottom: 30px; }
+    .container-5 .container-form input, .container-5 .container-form textarea {
+      width: 100%;
+      margin: 10px;
+      margin-left: -2px;
+      border-radius: 10px; }
+    .container-5 .container-form label {
+      color: blueviolet; }
+    .container-5 .container-form select {
+      width: 100%;
+      border-radius: 10px; }
+  .container-5 .ubicacion__referencias {
+    border-top: solid 1px blueviolet;
+    border-bottom: solid 1px blueviolet; }
+
+/*pagina-mis proyectos*/
+.img-proyectos {
+  width: 100%; }
+
+/*celulares*/
+@media (max-width: 710px) {
+  header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    header .container nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+  .grid {
+    display: grid;
+    width: 100%;
+    margin-top: 30px;
+    place-items: center;
+    gap: 20px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 4fr;
+    grid-template-areas: "html" "css" "sass" "js"; }
+  .container-ofrezco {
+    display: block; }
+  .container-5 {
+    display: block; } }
+
+/*tablets*/
+@media (max-width: 1023px) {
+  header .container nav {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  header .container a {
+    text-align: center; }
+  .container-ofrezco {
+    display: block; }
+  .container-5 {
+    display: block; }
+    .container-5 iframe {
+      width: 100%; } }

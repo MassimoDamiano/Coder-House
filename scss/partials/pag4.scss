@@ -1,0 +1,49 @@
+/*paginan-mis conocimientos*/
+.grid{
+    display: grid;
+    width: 100%;
+    margin-top: 30px;
+    place-items: center ;
+    gap: 20px;
+    grid-template-rows:1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "html   css"
+    "sass js";
+    .img-grid1{
+        grid-area: html;
+    }
+    
+    .img-grid2{
+        grid-area: js;
+    }
+    
+    .img-grid3{
+        grid-area: sass;
+    }
+    
+    .img-grid4{
+        grid-area: css;
+    }
+    .img-lenguajes{
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+        animation-name: img-lenguajes--animation;
+        animation-duration:5s;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate-reverse;
+        animation-iteration-count: infinite;
+    }
+    
+}
+
+
+@keyframes img-lenguajes--animation{
+    50%{
+        width: 500px;
+        height: 50px;
+    }
+
+}
+
